@@ -1,0 +1,131 @@
+/** photo slider **/
+.main__single-photo {
+    height: 100%;
+    background-color: #4D4D4D;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh 1fr;
+    grid-template-areas:
+        'product-slider'
+        'photo-grid'
+    ;
+    
+    .product-slider,
+    .product-slides {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    @include all-mobile-devices {
+        padding-top: $top-offset;       
+    }
+
+    .product-slider {
+        position: relative;
+
+        .custom-navigation {
+            z-index: 9999;
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            height: 100%;
+            display: -webkit-box;
+            display: flex;
+
+            a {
+                height: 100%;
+                width: 50%;
+                display: -webkit-box;
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+            }
+
+            .flex-prev {
+                -webkit-box-pack: start;
+                justify-content: flex-start;
+
+                &:hover {
+                    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
+                    background-image: linear-gradient(to left, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
+                }
+            }
+
+            .flex-next {
+                -webkit-box-pack: end;
+                justify-content: flex-end;
+
+                &:hover {
+                    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(0, 0, 0, .0001)), to(rgba(0, 0, 0, .5)));
+                    background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
+                }
+            }
+        }
+    }
+
+    ul.product-slides {
+        list-style: none;
+        padding-left: 0px;
+        margin: 0px;
+
+
+        li {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+
+    .flex-direction-nav {
+        display: none;
+    }
+}
+
+
+/** Regular Project Grid Areas **/
+
+.product-slider {
+    grid-area: product-slider;
+}
+
+.photo-grid {
+    grid-area: photo-grid;
+}
+
+/** Further Inspiration **/
+.designer-photo-tile {
+    position: relative;
+
+    .photo-grid {
+        display: grid;
+        grid-gap: 1em;
+
+        @include for-desktop-up {
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 300px;
+        }
+
+        @include for-tablet-only {
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 300px;
+        }
+
+        @include for-phone-only {
+            grid-template-columns: 1fr;
+            grid-auto-rows: 30vh;
+        }
+
+        .download-link {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

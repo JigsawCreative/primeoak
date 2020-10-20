@@ -1,0 +1,37 @@
+/** photo slider **/
+.main__single-file {
+    height: 100%;
+
+    @include all-mobile-devices {
+        padding-top: $top-offset;
+    }
+
+    ul.files {
+        display: grid;
+        grid-template-rows: auto;
+
+        @include for-desktop-up {
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+        @include for-tablet-only {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include for-phone-only {
+            grid-template-columns: 1fr;
+        }
+
+        li {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+}

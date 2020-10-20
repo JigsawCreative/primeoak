@@ -1,0 +1,50 @@
+/** sub menu styling **/
+
+.__products,
+.__downloads {
+    min-height: 100vh;
+    min-width: 100%;
+    background-color: $dark-grey;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: $top-offset;
+
+    .product-list,
+    .downloads-list {
+        width: 100%;
+
+        ul {
+            background-color: $dark-grey;
+            height: 100%;
+            list-style: none;
+            padding-left: 0px;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            overflow-y: auto;
+
+            li {
+                text-transform: uppercase;
+                border-bottom: 2px solid $grey;
+                width: 100%;
+                text-align: center;
+                padding: 2em 0em;
+            }
+
+            a {
+                color: $white;
+            }
+        }
+    }
+
+    /*altered spacing for product mobile page*/
+    .product-list {
+        ul {
+            justify-content: space-around;
+        }
+    }
+}

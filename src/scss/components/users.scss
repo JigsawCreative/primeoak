@@ -1,0 +1,17 @@
+.__user-created {
+    height: 100vh;
+
+    .user-created {
+        height: 100%;
+
+        .user-created-message {
+            h2 {
+                color: $white;
+            }
+
+            img {
+                max-width: 300px;
+            }
+        }
+    }
+}

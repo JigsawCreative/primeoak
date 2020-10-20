@@ -1,0 +1,85 @@
+/** Before and After **/
+
+#before-and-after {
+    display: -ms-grid;
+    display: grid;
+
+    .main__ba {
+        display: -ms-grid;
+        display: grid;
+        height: 100vh;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+
+        .ba-top-container {
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            position: relative;
+
+            .ba-title-box {
+                padding: 2em;
+
+                h1,
+                hr {
+                    color: $white;
+                }
+            }
+        }
+
+        .ba-image-comparison {
+            .project-title {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@include for-desktop-up {
+
+    .main__ba {
+        grid-auto-rows: minmax(60px, -webkit-max-content);
+        grid-auto-rows: minmax(60px, max-content);
+        grid-template-areas:
+            'ba-header'
+            'ba-cta'
+            'before-and-after'
+        ;
+    }
+}
+
+@include all-mobile-devices {
+    .main__ba {
+        padding-top: $top-offset;
+        grid-template-rows: minmax(100px, max-content);
+        grid-template-areas:
+            'ba-header'
+            'before-and-after'
+            'ba-cta'
+        ;
+
+        h1 {
+            font-size: 1em;
+        }
+    }
+}
+
+.ba-image-header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: ba-header;
+}
+
+.ba-image-comparison {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: before-and-after;
+}
+
+.ba_cta_section {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: ba-cta;
+}

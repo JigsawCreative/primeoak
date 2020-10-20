@@ -1,0 +1,73 @@
+/** cta styling **/
+
+/*cta section*/
+.cta_section,
+.ba_cta_section {
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-around;
+    background-color: $dark-grey;
+    color: $white;
+
+    .call-to-action {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+
+    a {
+        color: $white;
+        font-size: 0.8em;
+    }
+}
+
+@include all-mobile-devices {
+
+    .cta_section,
+    .ba_cta_section {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+
+        .cta-title,
+        .ba-cta-title {
+            display: none;
+        }
+
+        .call-to-action {
+            width: 95%;
+            /*margin: auto;*/
+
+            .cta-button {
+                display: none;
+            }
+
+            a {
+                width: 100%;
+                text-align: center;
+                font-size: 1.3em;
+            }
+        }
+    }
+
+    .ba_cta_section,
+    .cta_section {
+        a {
+            margin: 1em 0.5em;
+        }
+    }
+}
+
+@include for-desktop-up {
+
+    .cta-mobile-btn {
+        display: none;
+    }
+
+    .btn-ghost {
+        margin-left: 1em;
+    }
+}

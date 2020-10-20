@@ -1,0 +1,207 @@
+/** Forms **/
+
+.main__form {
+    display: -ms-grid;
+    display: grid;
+    height: 100vh;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+
+    .form-header {
+        padding: 2em;
+
+        .form-header-container {
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            position: relative;
+
+            .forms-title-box {
+                /* position: absolute;
+                left: 50%;
+                top: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); */
+
+                h1 {
+                    color: $white;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    /** Thank you page **/
+    .thank-you {
+        background-color: $dark-grey;
+
+        .thank-you-container {
+            padding: 3em 1em;
+            color: $white;
+
+            h1 {
+                font-size: 3em !important;
+            }
+        }
+    }
+}
+
+
+
+#gform_1,
+#gform_2 {
+
+    .gform_wrapper {
+
+        ul,
+        li,
+        input,
+        select,
+        option,
+        textarea {
+            padding-right: 0px !important;
+        }
+    }
+
+    li:not(.gf_left_half) {
+        padding-right: 0px !important;
+    }
+
+    li.gt_left_half {
+        padding-right: 8px;
+    }
+
+    .gfield_checkbox {
+
+        li {
+            margin: 10px;
+        }
+    }
+
+    .ginput_right {
+        padding-right: 0px;
+    }
+
+    label,
+    option,
+    select,
+    input,
+    textarea {
+        font-size: 1.3em;
+        font-family: Gill-Sans-Light;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        height: 5em;
+        font-size: 1.9em;
+        color: #333;
+        border: none;
+        background-color: $cream;
+        padding-right: 16px;
+    }
+
+    select {
+        color: $grey;
+        margin: 12px 0 !important;
+    }
+
+    .form-field {
+
+        input,
+        select {
+            padding: 1em;
+        }
+    }
+
+    span.name_first {
+        padding-top: 0px;
+    }
+
+    .hidden_label {
+        margin-top: 0px;
+    }
+
+    span.address_country {
+        margin-top: 0px;
+    }
+}
+
+@include for-desktop-up {
+    .form-details {
+        max-width: 1000px;
+        margin: auto;
+
+        /** 3 field row styling **/
+        .top_label div.ginput_complex.ginput_container.gf_name_has_3 {
+            width: calc(100% + 20px);
+        }
+
+        .forms-title-box {
+            h1 {
+                font-size: 3em !important;
+            }
+        }
+    }
+}
+
+@include for-tablet-portrait-up {
+
+    /* Correct address module styling */
+    .ginput_left {
+        margin-right: 0px !important;
+        padding-right: 16px !important;
+    }
+
+    /** Trim postcode box size **/
+    #input_1_2_5_container,
+    #input_2_2_5_container {
+        padding-right: 16px !important;
+    }
+
+    /** Set Hear About Us field fullwidth **/
+    #input_2_7 {
+        width: 100%;
+    }
+
+    /** Set contact day checkboxes as a row **/
+    .gfield_checkbox {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@include all-mobile-devices {
+    .main__form {
+        padding-top: $top-offset;
+
+        li:not(.hear_about_us):not(.gf_left_half) {
+            padding-right: 0px !important;
+        }
+
+        .form-details {
+            max-width: 100%;
+            margin: auto;
+        }
+    }
+
+    .brochure-form,
+    .design-consultation {
+        padding: 2em;
+    }
+
+    /** Make 'other times' field fullwidth on mobile **/
+    #field_1_12 {
+        width: 100%;
+    }
+}
+
+@include for-phone-only {
+    .ginput_left {
+        padding-right: 0px !important;
+    }
+}

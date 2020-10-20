@@ -1,0 +1,261 @@
+#contact {
+    display: -ms-grid;
+    display: grid;
+    min-height: 100vh;
+}
+
+.main__contact {
+    display: -ms-grid;
+    display: grid;
+}
+
+@include for-desktop-up {
+
+    .main__contact {
+        -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;    
+        -ms-grid-columns: 50% 50%;    
+        grid-template-columns: 50% 50%;
+               grid-template-areas: 
+         'contact-col-1 contact-col-2'    
+         ;    
+    } 
+
+    .mobile__cross {
+        display: none!important;
+    }
+}
+
+/*Mobile Contact/Opportunities*/
+@include all-mobile-devices {
+
+    .main__contact {
+        padding-top: $top-offset;
+        .contact__mobile__content {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-rows: (45vh)[2];
+            grid-template-rows: repeat(2, 45vh);
+                grid-template-areas: 
+                'contact'
+                'opps'
+                ;
+            /*grid-auto-rows: minmax(250px, min-content);   */
+            color: $white; 
+
+            div {
+                display: -webkit-box;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                        flex-direction: column;
+                -webkit-box-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                        align-items: center;
+                /*height: 48vh;*/
+            }
+        } 
+    }
+}
+
+@include for-desktop-up {
+    /*turn off on desktop*/
+    .contact__mobile {
+        display: none;
+    }
+}
+
+/*Columns*/
+
+.contact-col-1, .contact-col-2 {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+}
+
+.contact-col-1 {
+    background-color: $white!important;
+}
+
+@include for-desktop-up {
+    .contact-col-1, .contact-col-2 {
+        height: 100vh;
+    }
+}
+
+@include all-mobile-devices {
+    /*Remove Columns on mobile*/
+    .contact-col-1, .contact-col-2 {
+        position: absolute;
+        width: 100%;
+        top: -300vh;
+    }
+
+    .contact-col-1 {
+        -webkit-transition: 1000ms;
+        transition: 1000ms;
+    }
+
+    .contact-col-2 {
+        -webkit-transition: 1000ms;
+        transition: 1000ms;
+    }
+
+    .overflow-hide {
+        overflow: hidden;
+    }
+
+    .show-column {
+        top: 0px;
+        padding-top: $top-offset;
+        height: 100vh;
+    }
+
+.mobile-cross-wrapper {
+    position: relative;
+    
+    .mobile__cross {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color: $grey;
+        width: 30px;
+        height: 30px;
+        display: -webkit-box;
+        display: flex;
+        z-index: 4;
+    }
+    
+}
+
+    .contact-us {
+        margin-bottom: 10px;
+    }
+}
+
+/*Contact Column*/
+
+.contact-box {
+    width: 100%;
+    position: relative;
+    padding: 15px;
+    display: -ms-grid!important;
+    display: grid!important;
+    
+    .contact__title {
+        text-align: center;        
+    }    
+
+    /*Map*/
+    .mapouter, .gmap_canvas, #gmap_canvas {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@include for-desktop-up {
+    .contact-box {
+        padding: 40px;
+        -ms-grid-rows: auto minmax(400px, -webkit-max-content) -webkit-max-content -webkit-max-content;
+        -ms-grid-rows: auto minmax(400px, max-content) max-content max-content;
+        grid-template-rows: auto minmax(400px, -webkit-max-content) -webkit-max-content -webkit-max-content;
+        grid-template-rows: auto minmax(400px, max-content) max-content max-content;
+        -ms-grid-columns: 6fr 6fr;
+        grid-template-columns: 6fr 6fr;
+                grid-template-areas: 
+            'title title'
+            'map map'
+            'address hours'
+            'telephone telephone'
+            ;
+        }
+
+        .hours {
+            p {
+                margin-left: 4em;
+            }
+        }
+}
+
+@include all-mobile-devices {
+    .contact-box {
+      
+        -ms-grid-rows: auto 400px -webkit-max-content -webkit-max-content;
+      
+        -ms-grid-rows: auto 400px max-content max-content;
+      
+        grid-template-rows: auto 400px -webkit-max-content -webkit-max-content;
+      
+        grid-template-rows: auto 400px max-content max-content;
+                grid-template-areas:
+            'title'
+            'map'
+            'address'
+            'hours'
+            'telephone'
+            ;
+    }
+}
+
+/*Opportunities Column*/
+#opp_image {
+    background-size: cover;
+    background-position: center;
+}
+
+.opp_box {
+    max-width: 70%;
+    height: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    padding: 20px;
+    color: $white;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    text-align: center;
+    
+    a {
+        color: $white;
+    }
+    
+    a:hover {
+        color: $white;
+        opacity: 0.7;
+    }
+
+    /** Social Icons **/
+    .social-icons {
+        position: absolute;
+        bottom: 2%;
+
+        .icon-list {
+
+            .social img {
+                width: 28px;
+                margin: 0px 10px;
+             
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+/* Grid Template Areas */
+.contact-col-1 { -ms-grid-row: 1; -ms-grid-column: 1; grid-area: contact-col-1; }
+.contact-col-2 { -ms-grid-row: 1; -ms-grid-column: 2; grid-area: contact-col-2; }
+.contact__title { -ms-grid-row: 1; -ms-grid-column: 1; -ms-grid-row: 1; -ms-grid-column: 1; -ms-grid-column-span: 2; grid-area: title; }
+.mapouter { -ms-grid-row: 2; -ms-grid-column: 1; -ms-grid-row: 2; -ms-grid-column: 1; -ms-grid-column-span: 2; grid-area: map; }
+.address { -ms-grid-row: 3; -ms-grid-column: 1; -ms-grid-row: 3; -ms-grid-column: 1; grid-area: address; }
+.hours { -ms-grid-row: 4; -ms-grid-column: 1; -ms-grid-row: 3; -ms-grid-column: 2; grid-area: hours; }
+.tel { -ms-grid-row: 5; -ms-grid-column: 1; -ms-grid-row: 4; -ms-grid-column: 1; -ms-grid-column-span: 2; grid-area: telephone; }
+.contact-us { -ms-grid-row: 1; -ms-grid-column: 1; grid-area: contact; }
+.opportunities { -ms-grid-row: 2; -ms-grid-column: 1; grid-area: opps; }

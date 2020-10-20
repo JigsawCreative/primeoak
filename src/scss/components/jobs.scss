@@ -1,0 +1,124 @@
+/** jobs styling **/
+
+/** Main jobs template **/
+.main__jobs {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include for-desktop-up {
+        grid-template-rows: max-content;
+        grid-template-areas:
+            'product_gallery'
+        ;
+    }
+
+    @include all-mobile-devices {
+        padding-top: $top-offset;
+        grid-template-rows: max-content;
+        grid-template-areas:
+            'product_gallery'
+        ;
+    }
+
+    .job-gallery {
+
+        .job-list {
+            list-style: none;
+            padding-left: 0px;
+            margin-bottom: 0px;
+            display: grid;
+
+            .job-last-post {
+                grid-column: 1 / span 2;
+            }
+
+
+            @include for-desktop-up {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include all-mobile-devices {
+                grid-template-columns: 1fr;
+                grid-template-rows: minmax(100px, max-content);
+            }
+
+            li {
+                position: relative;
+
+                @include for-desktop-up {
+
+                    &:hover {
+
+                        .job-overlay,
+                        .job-info-container {
+                            opacity: 1;
+                            -webkit-transition: opacity .3s ease-in-out;
+                            -moz-transition: opacity .3s ease-in-out;
+                            -o-transition: opacity .3s ease-in-out;
+                            transition: opacity .3s ease-in-out;
+                        }
+                    }
+                }
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+
+            .job-info-container {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                width: 100%;
+                z-index: 4;
+                text-align: center;
+                -webkit-transition: opacity .3s ease-in-out;
+                -moz-transition: opacity .3s ease-in-out;
+                -o-transition: opacity .3s ease-in-out;
+                transition: opacity .3s ease-in-out;
+
+                @include for-desktop-up {
+                    opacity: 0;
+                }
+
+
+                .job-title {
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: $white;
+                }
+
+                .job-btn {
+                    margin-left: 0px;
+                }
+            }
+
+            .job-overlay {
+                position: absolute;
+                background: rgba(0, 0, 0, .5);
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                color: #fff;
+                text-align: center;
+                -webkit-transition: opacity .3s ease-in-out;
+                -moz-transition: opacity .3s ease-in-out;
+                -o-transition: opacity .3s ease-in-out;
+                transition: opacity .3s ease-in-out;
+
+                @include for-desktop-up {
+                    border: 12px solid rgba(255, 255, 255, .3);
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+.job-gallery {
+    grid-area: product_gallery;
+}

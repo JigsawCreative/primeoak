@@ -1,0 +1,239 @@
+body {
+    display: -ms-grid;
+    display: grid;
+    line-height: 1.7;
+
+    @include all-mobile-devices {
+        min-height: 100vh;
+        -ms-grid-rows: auto 1fr auto;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            'main-menu'
+            'main'
+        ;
+    }
+
+
+    @include for-desktop-up {
+        -ms-grid-rows: 1fr auto auto;
+        grid-template-rows: 1fr auto auto;
+        -ms-grid-columns: 320px 10fr;
+        grid-template-columns: 320px 10fr;
+        grid-template-areas:
+            'main-menu main'
+        ;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: Gill-Sans-Light;
+}
+
+p {
+    font-size: 1.6rem !important;
+}
+
+@include for-tablet-portrait-up {
+    h1 {
+        font-size: 4rem !important;
+    }
+
+    h2 {
+        font-size: 3rem !important;
+    }
+
+    h3 {
+        font-size: 2rem !important;
+    }
+
+}
+
+@include for-phone-only {
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    h2 {
+        font-size: 1.9rem !important;
+    }
+
+    h3 {
+        font-size: 1.8rem !important;
+    }
+}
+
+a {
+    font-size: 14px;
+    color: inherit;
+
+    a:hover {
+        opacity: 0.7 !important;
+    }
+}
+
+/** Dividers **/
+
+hr {
+    width: 80px;
+    color: inherit;
+}
+
+hr.grey-margin {
+    border-top: 4px solid #d1cfcf;
+    margin: 50px 0;
+}
+
+hr.white-no-margin {
+    border-top: 4px solid $white;
+}
+
+/** Remove default list stlying **/
+.stripped {
+    list-style: none;
+    padding-left: 0px;
+}
+
+/** Unstyled list **/
+.unstyled-list {
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+
+/** Button globals **/
+.btn-ghost {
+    background: 0 0;
+    border: 1px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    padding: 1em 3em;
+}
+
+.btn-dark {
+    background: $dark-grey;
+    border: 1px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    padding: 1em 3em;
+}
+
+/** x back button **/
+.x {
+    width: 60px;
+    height: 60px;
+    background-color: #444;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10000;
+
+    /** Create cross **/
+    span {
+        display: block;
+        background-color: #ffffff;
+        width: 30px;
+        height: 3px;
+        margin: 5px 0;
+    }
+
+    span:nth-child(1) {
+        -webkit-transform: rotate(45deg) translate(1px, 1px);
+        transform: rotate(45deg) translate(1px, 1px);
+    }
+
+    span:nth-child(2) {
+        -webkit-transform: rotate(-45deg) translate(5px, -5px);
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+/** Absolute center with flex **/
+.centred {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centred-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/** Boxed Content **/
+.boxed-content {
+    max-width: 1280px;
+    margin: auto;
+}
+
+/** Boxed Form **/
+.boxed-form {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/** Fullwidth images **/
+.full {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/** Full height **/
+.fh {
+    height: 100%;
+}
+
+/** Full screen height **/
+.full-height {
+    height: 100vh;
+}
+
+/** Global Grid Areas **/
+header {
+    grid-area: main-menu;
+}
+
+.main {
+    grid-area: main;
+}
+
+footer {
+    height: 0px;
+}
+
+/** Image grid **/
+.image_grid_area {
+    position: relative;
+
+    .image_grid {
+        display: grid;
+        grid-gap: 1em;
+
+        @include for-desktop-up {
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 300px;
+        }
+
+        @include for-tablet-only {
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 300px;
+        }
+
+        @include for-phone-only {
+            grid-template-columns: 1fr;
+            grid-auto-rows: 30vh;
+        }
+    }
+}

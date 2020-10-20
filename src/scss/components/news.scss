@@ -1,0 +1,46 @@
+/** News posts layout **/
+        .main__news {
+            display: -ms-grid;
+            display: grid;
+            grid-gap: 3px;
+            grid-template-column: 1fr;
+
+            .news {
+                padding: 0 2em;
+                display: -webkit-box;
+                display: flex;
+                -webkit-box-align: center;
+                        align-items: center;                
+
+                .article-container {
+                    height: 80%;
+                    display: -webkit-box;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                            flex-direction: column;
+                    justify-content: space-around;
+
+                        h1 {
+                        color: $white;
+                        margin: 0px;
+                    }
+                }
+            }
+        }
+
+@include for-desktop-up {
+
+          .main__news {
+
+            grid-auto-rows: 397px;
+    
+          }
+    }
+
+@include all-mobile-devices {
+    .main__news {
+        padding-top: $top-offset;
+        grid-auto-rows: 250px;
+    }
+}

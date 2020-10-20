@@ -1,0 +1,113 @@
+/** testimonials styling **/
+
+#testimonials {
+    display: -ms-grid;
+    display: grid;
+
+    .main__testimonials{
+
+        .testimonial-text {
+            padding: 2em;
+        }
+
+        .testimonial-modules {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-rows: 1fr;
+            grid-template-rows: 1fr;
+        }
+    }
+}    
+
+@include for-desktop-up {
+
+    .main__testimonials {  
+
+        .img-right {
+            -ms-grid-column: 5;
+            -ms-grid-column-span: 5;
+            grid-column: 5/10;
+            width: 100%;
+        }
+
+        .img-left { 
+            -ms-grid-column: 1; 
+            -ms-grid-column-span: 5; 
+            grid-column: 1/6;
+            width: 100%;
+        }
+
+        .text-left {
+            -ms-grid-column: 1;
+            -ms-grid-column-span: 4;
+            grid-column: 1/5;
+        }
+
+        .text-right {        
+            -ms-grid-column: 6;        
+            -ms-grid-column-span: 4;       
+            grid-column: 6/10;
+        }
+        
+
+        .testimonial-modules {
+        grid-auto-rows: 1fr;
+        -ms-grid-columns: (1fr)[9];
+        grid-template-columns: repeat(9, 1fr);
+        grid-auto-flow: column;
+
+
+        .img-right {
+            -ms-grid-column: 5;
+            -ms-grid-column-span: 5;
+            grid-column: 5/10;
+            width: 100%;
+        }
+
+        .img-left { 
+            -ms-grid-column: 1; 
+            -ms-grid-column-span: 5; 
+            grid-column: 1/6;
+            width: 100%;
+        }
+
+        .text-left {
+            -ms-grid-column: 1;
+            -ms-grid-column-span: 4;
+            grid-column: 1/5;
+        }
+
+        .text-right {        
+            -ms-grid-column: 6;        
+            -ms-grid-column-span: 4;       
+            grid-column: 6/10;
+        }
+
+        }
+    }
+}
+
+@include all-mobile-devices {
+        .main__testimonials {  
+        padding-top: $top-offset;
+
+            h1 {
+                font-size: 1em;
+            }
+
+            .testimonial-modules {
+                img {
+                    -webkit-box-ordinal-group: 2;
+                            order: 1;
+                    width: 100%;
+                }
+
+                .testimonial-text {
+                    -ms-grid-row: 1;
+                    -ms-grid-row-span: 1;
+                    grid-row: 1/2;
+                    grid-column: 1/ -1;
+                }
+            }
+    }
+}

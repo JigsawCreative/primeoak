@@ -1,0 +1,94 @@
+/** main styling **/
+.__login,
+.__registration,
+.__designer-password-reset {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+
+    .columns {
+        .login-image {
+            img {
+                min-height: 100%;
+            }
+        }
+
+        .login-fields {
+            padding: 1em;
+        }
+    }
+
+    .designers-form {
+
+        label,
+        input {
+            display: block;
+            padding: 1em 2em;
+        }
+
+        label {
+            padding-left: 0px;
+        }
+
+        input {
+            border: 1px solid $grey;
+        }
+
+        .btn-submit,
+        input {
+            width: 100%;
+            border-radius: 3px;
+            border: 1px solid $dark-grey;
+            margin: 0.5em 0;
+
+            p {
+                margin: 6px 0;
+            }
+        }
+    }
+
+}
+
+
+
+@include for-desktop-up {
+
+    .login-container,
+    .registration-container {
+        max-width: 1280px;
+        margin: auto;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        border: 1px solid $grey;
+        box-shadow: $small-shadow;
+
+        .columns {
+            width: 50%;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            background-color: $white;
+
+            .login-fields {
+                width: 55%;
+            }
+
+        }
+    }
+}
+
+@include all-mobile-devices {
+    .login-container {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        flex-direction: column-reverse;
+        background-color: $off-white;
+    }
+}
