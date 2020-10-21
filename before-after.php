@@ -39,10 +39,24 @@
 
 								<div id="ba_cta-<?php echo $counter; ?>" class="call-to-action">
 									<p class="ba-cta-title"><?php echo $ba_cta_title; ?></p>
-									<a href="<?php echo $ba_cta_button_link; ?>" class="cta-button btn-ghost"><?php echo $ba_cta_button_text; ?></a>
+
+									<!-- Decide whether or not to render link with gold text -->
+									<?php if($counter > 2) : ?>
+										
+										<a href="<?php echo $ba_cta_button_link; ?>" class="cta-button btn-ghost office-number"><p class="office-contact"><?php echo $ba_cta_button_text; ?></p></a>
+
+									<?php else : ?>
+
+										<a href="<?php echo $ba_cta_button_link; ?>" class="cta-button btn-ghost"><?php echo $ba_cta_button_text; ?></a>
+
+									<?php endif; ?>			
+									
 									<a href="<?php echo $ba_cta_button_link; ?>" class="cta-mobile-btn btn-ghost"><?php echo $ba_mobile_button_text; ?></a>
+
 								</div>
+
 								<?php $counter++; ?>
+
 							<?php endwhile; ?>
 
 				<?php endif; ?>	
