@@ -17,7 +17,8 @@ $small-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24),
 /** Typography **/
 @font-face {
     font-family: Gill-Sans-Light;
-    src: url(https://www.primeoak.indigo.mysitepreview.co.uk/wp-content/themes/prime-oak/fonts/GillSans-Light.ttf);
+    //src: url(./wp-content/themes/prime-oak/fonts/GillSans-Light.ttf);
+    src: url(../../fonts/GillSans-Light.ttf);
     font-weight: light;
 }
 
