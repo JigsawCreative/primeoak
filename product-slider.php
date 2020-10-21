@@ -11,9 +11,9 @@
 			    <div class="product-slider">
 			    	<div class="x centred">
 						<a href="<?php echo $go_back; ?>" class="back-btn">
-							<!-- <span></span>
-							<span></span> -->
-							<p><b>BACK</b></p>
+							<span></span>
+							<span></span>
+							<!-- <p><b>BACK</b></p> -->
 						</a>
 					</div>
 			        <ul class="slides product-slides">
