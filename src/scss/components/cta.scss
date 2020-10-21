@@ -16,6 +16,17 @@
         align-items: center;
     }
 
+    .office-number {
+        border: none;
+
+        .office-contact {
+            font-size: 1em;
+            font-weight: bold;
+            color: #b0a773;
+            margin: 0;
+        }
+    }
+
     a {
         color: $white;
         font-size: 0.8em;
