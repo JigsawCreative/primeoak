@@ -1,17 +1,10 @@
 /** News posts layout **/
 .single-news {
-    // display: -ms-grid;
-    // display: grid;
-    // -ms-grid-columns: 1fr;
-    // grid-template-columns: 1fr;
-    // -ms-grid-rows: 700px -webkit-min-content;
-    // grid-template-rows: 700px -webkit-min-content;
-    // -ms-grid-rows: 700px min-content;
-    // grid-template-rows: 700px min-content;
-    // grid-template-areas:
-    //     'news-slider'
-    //     'news-body'
-    // ;
+    
+    /** Layout for project journey news items **/
+    .project-journey {
+        grid-template-rows: auto;
+    }
 
     .news-slider {
         position: relative;

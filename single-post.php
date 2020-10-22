@@ -9,8 +9,18 @@
 		<!-- article -->
 		<article id="post-<?php the_ID(); ?>" class="single-news">
 
+			<!-- If news item type is project journey add project journey class -->
+			<?php $project_journey = get_field( 'project_journey' ); ?>
 
-			<div class="news-body">
+			<?php if($project_journey) : ?>
+
+				<div class="news-body project-journey">
+
+			<?php else : ?>
+
+				<div class="news-body">
+			
+			<?php endif; ?>
 
 				<!-- cross button -->
 				<div class="x centred">
