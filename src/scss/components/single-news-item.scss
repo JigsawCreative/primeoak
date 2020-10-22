@@ -65,6 +65,17 @@
 
 .news-body {
     display: grid;
+    @include for-desktop-up {
+        grid-template-rows: 100vh 1fr auto;
+    }
+
+    @include for-tablet-only {
+        grid-template-rows: 40vh 1fr auto;
+    }
+
+    @include for-phone-only {
+        grid-template-rows: 30vh 1fr auto;
+    }
 
     .news-body-text {
         padding: 3em;

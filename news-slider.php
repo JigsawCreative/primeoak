@@ -4,8 +4,7 @@
 
         <?php foreach( $news_sliders as $news_slider ): ?>
             
-            <li>
-                <img src="<?=$news_slider['url']; ?>" alt="<?=$news_slider['alt']; ?>" />
+            <li style="background: url(<?=$news_slider['url']; ?>) center/cover no-repeat;">
             </li>
             
         <?php endforeach; ?>

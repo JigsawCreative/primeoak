@@ -24,6 +24,17 @@
                         h1 {
                         color: $white;
                         margin: 0px;
+
+                        @include for-desktop-up {
+                            max-width: 60%;
+                        }
+                    }
+
+                    .news-links {
+
+                        .btn-ghost {
+                            margin-left: 0px;
+                        }
                     }
                 }
             }
