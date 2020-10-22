@@ -14,7 +14,7 @@
 
 
 			</video>
-						<div class="overlay"></div>
+						
 			<div class="video-titles centred-column">
 				<div class="video-title"><?php the_field( 'video_title' ); ?></div>
 				<img src="<?php echo $video_logo['url']; ?>" alt="Prime Oak Logo">
