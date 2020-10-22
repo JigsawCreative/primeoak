@@ -64,6 +64,7 @@
 }
 
 .news-body {
+    position: relative;
     display: grid;
     @include for-desktop-up {
         grid-template-rows: 100vh 1fr auto;

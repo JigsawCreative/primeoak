@@ -9,78 +9,79 @@
 		<!-- article -->
 		<article id="post-<?php the_ID(); ?>" class="single-news">
 
-		<!-- cross button -->
-		<div class="x centred">
-			<a href="/news" class="news-back">
-				<span></span>
-				<span></span>
-			</a>
-		</div>	
 
-				<div class="news-body">
+			<div class="news-body">
 
-					<!-- image slider -->
-					<?php 
-						$news_sliders = get_field('news_slider');
-						if( $news_sliders ): 
-							include('news-slider.php')
-						?>
-						
-					<?php endif; ?>
+				<!-- cross button -->
+				<div class="x centred">
+					<a href="/news" class="news-back">
+						<span></span>
+						<span></span>
+					</a>
+				</div>	
 
-					<!-- /image slider -->
-			
-					<!-- post title -->
+				<!-- image slider -->
+				<?php 
+					$news_sliders = get_field('news_slider');
+					if( $news_sliders ): 
+						include('news-slider.php')
+					?>
+					
+				<?php endif; ?>
 
-					<div class="news-body-text">
+				<!-- /image slider -->
+		
+				<!-- post title -->
 
-						<h1><?php the_title(); ?></h1>
+				<div class="news-body-text">
 
-						<!-- /post title -->	
+					<h1><?php the_title(); ?></h1>
 
-						<?php the_field( 'news_body_text' ); ?>
+					<!-- /post title -->	
 
-					</div>
-
-					<?php
-					$before_and_after = get_field( 'add_before_and_after' );
-						if($before_and_after) :
-							$div_id = 1; 
-								echo '<section class="post-ba-image-comparison">';
-								echo '<p class="post-ba-title">Please drag the arrows across the image to reveal the Before and After images</p>';
-								//loop through the rows of data
-								while(have_rows('post_before_and_after') ) : the_row();
-
-									echo '<div id="ba-comparison-' . $div_id . '">';
-
-										include(locate_template('/template-parts/flexible-content/image-comparison.php'));
-
-									echo '</div>';
-
-								$div_id++;
-
-								endwhile;
-								echo '</section>';
-
-							else :
-
-								// no layouts found
-
-						endif;
-
-					?>	
+					<?php the_field( 'news_body_text' ); ?>
 
 				</div>
 
-				<div class="news-image-grid">
-					<?php $grid_images = get_field( 'grid_images' );  
+				<?php
+				$before_and_after = get_field( 'add_before_and_after' );
+					if($before_and_after) :
+						$div_id = 1; 
+							echo '<section class="post-ba-image-comparison">';
+							echo '<p class="post-ba-title">Please drag the arrows across the image to reveal the Before and After images</p>';
+							//loop through the rows of data
+							while(have_rows('post_before_and_after') ) : the_row();
 
-					if($grid_images): 
+								echo '<div id="ba-comparison-' . $div_id . '">';
 
-						include('grid-images.php');
+									include(locate_template('/template-parts/flexible-content/image-comparison.php'));
 
-					endif; ?>
-				</div>
+								echo '</div>';
+
+							$div_id++;
+
+							endwhile;
+							echo '</section>';
+
+						else :
+
+							// no layouts found
+
+					endif;
+
+				?>	
+
+			</div>
+
+			<div class="news-image-grid">
+				<?php $grid_images = get_field( 'grid_images' );  
+
+				if($grid_images): 
+
+					include('grid-images.php');
+
+				endif; ?>
+			</div>
 
 		</article>
 		<!-- /article -->
