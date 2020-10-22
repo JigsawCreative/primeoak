@@ -78,10 +78,4 @@
 .__showsite { -ms-grid-row: 1; -ms-grid-column: 2; grid-area: main;}
 .showsite-video { -ms-grid-row: 1; -ms-grid-column: 1; grid-area: video;}
 .showsite-text { -ms-grid-row: 2; -ms-grid-column: 1; grid-area: showsite-text;}
-.showsite-text > .showsite-text {
--ms-grid-row: 1;
--ms-grid-column: 1;}
-.showsite-text > .showsite-text {
--ms-grid-row: 1;
--ms-grid-column: 1;}
 .viewing-times-container { -ms-grid-row: 2; -ms-grid-column: 1; -ms-grid-row: 1; -ms-grid-column: 2; grid-area: viewing;}
