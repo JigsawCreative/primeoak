@@ -3,7 +3,7 @@
     
     /** Layout for project journey news items **/
     .project-journey {
-        grid-template-rows: auto;
+        grid-template-rows: max-content 1fr;
     }
 
     .news-slider {
