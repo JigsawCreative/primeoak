@@ -40,7 +40,6 @@
                         <p>Swindon,</p>
                         <p>South Staffordshire,</p>
                         <p>DY3 4PE</p>
-                        <hr>
                     </div>    
                         
                     <div class="hours">
