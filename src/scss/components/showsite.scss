@@ -3,23 +3,48 @@
 .__showsite {
     display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: max-content;
-    grid-template-areas:
-    'video'
-    'showsite-text'
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        'showsite_text showsite_text'
+        'swindon_video high_beeches_img'
+        'swindon_showsite_text high_beeches_text'
+        'showsite_drone_video showsite_drone_video' 
     ;
+
+    grid-template-rows: max-content max-content max-content 60vh;
+
+    .showsite-video {
+        background: grey;
+    }
+
+    .showsite-drone-video {
+
+        .drone-video-inner {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .showsite-products {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            max-width: 80%;
+        }
+    }
 }  
 
 .showsite-text {
     display: -ms-grid;
     display: grid;
-    
     background-color: $dark-grey;
     width: 100%;
     padding: 1em;
 
-    h1, p {
+    h2, p {
         color: $white;
     }
 
@@ -58,6 +83,21 @@
     }
 }
 
+@include for-phone-only {
+    .__showsite {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, max-content) 50vh;
+        grid-template-areas: 
+            'swindon_video'
+            'swindon_showsite_text'
+            'high_beeches_img'
+            'high_beeches_text'
+            'showsite_text'
+            'showsite_drone_video'
+        ;
+    }
+}
+
 @include all-mobile-devices {
     .__showsite {
         padding-top: $top-offset;
@@ -76,6 +116,10 @@
 }
 
 .__showsite { -ms-grid-row: 1; -ms-grid-column: 2; grid-area: main;}
-.showsite-video { -ms-grid-row: 1; -ms-grid-column: 1; grid-area: video;}
-.showsite-text { -ms-grid-row: 2; -ms-grid-column: 1; grid-area: showsite-text;}
-.viewing-times-container { -ms-grid-row: 2; -ms-grid-column: 1; -ms-grid-row: 1; -ms-grid-column: 2; grid-area: viewing;}
+#swindon-showsite { -ms-grid-row: 1; -ms-grid-column: 1; grid-area: swindon_video;}
+#swindon-showsite-text {grid-area: swindon_showsite_text;}
+#high-beeches-showsite { grid-area: high_beeches_img; }
+#high-beeches-showsite-text { grid-area: high_beeches_text; }
+.showsite-text { -ms-grid-row: 2; -ms-grid-column: 1; grid-area: showsite_text;}
+.viewing-times-container { -ms-grid-row: 2; -ms-grid-column: 1; grid-area: viewing;}
+.showsite-drone-video { grid-area: showsite_drone_video; }

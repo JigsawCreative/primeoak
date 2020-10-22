@@ -28,6 +28,10 @@
             -ms-grid-column-span: 5;
             grid-column: 5/10;
             width: 100%;
+
+            img {
+                width: 100%;
+            }
         }
 
         .img-left { 

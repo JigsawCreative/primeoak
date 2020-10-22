@@ -9,6 +9,7 @@
 .main__product {
     display: grid;
     grid-template-columns: 1fr;
+    -ms-grid-column: 2;
 
     @include for-desktop-up {
         grid-template-rows: 20em max-content max-content max-content;
