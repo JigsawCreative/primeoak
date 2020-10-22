@@ -7,7 +7,7 @@ $(document).ready(function() {
         $('.contact-col-1').toggleClass('show-column');
     });
     
-    $('.mobile__cross').click(function() {
+    $('.contact__cross').click(function() {
         $('.contact-col-1').removeClass('show-column');
         $('.contact-col-2').removeClass('show-column');
     });
@@ -16,5 +16,4 @@ $(document).ready(function() {
         $('.contact-col-2').toggleClass('show-column');
     });    
     }
-    console.log(w);
 });

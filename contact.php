@@ -22,7 +22,7 @@
         </div>     
         
         <div class="contact-col-1 cols">
-            <div class="x centred">
+            <div class="x centred contact__cross">
                 <div>
                     <span></span>
                     <span></span>
@@ -31,27 +31,31 @@
             <div class="contact-box">
                 <h1 class="contact__title">GET IN TOUCH</h1>
                 <div class="contact-details">
+                    <div class="contact__wrapper">
+                        <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=prime%20oak%20swindon&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            
+                        <div class="contact__opening__hours">
+                            <div class="address">
+                                    <p>Prime Oak Ltd</p>
+                                    <p>Whitehouse Farm,</p>
+                                    <p>Whitehouse Lane,</p>
+                                    <p>Swindon,</p>
+                                    <p>South Staffordshire,</p>
+                                    <p>DY3 4PE</p>
+                                </div>    
+                                    
+                                <div class="hours">
+                                    <p>Office opening hours are 8am – 5:30pm Monday to Friday.</p>
 
-                <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=prime%20oak%20swindon&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                    <div class="address">
-                        <p>Prime Oak Ltd</p>
-                        <p>Whitehouse Farm,</p>
-                        <p>Whitehouse Lane,</p>
-                        <p>Swindon,</p>
-                        <p>South Staffordshire,</p>
-                        <p>DY3 4PE</p>
-                    </div>    
-                        
-                    <div class="hours">
-                        <p>Office opening hours are 8am – 5:30pm Monday to Friday.</p>
-
-                        <p>Should you need to call out of hours, please leave a message with our answering service.</p>
-                    </div>
-                    
-                    <div class="tel">
-                        <p>Tel: <a href="tel:+44 1384 296 611">+44 1384 296 611</a></p>
-                        <p>Fax: +44 1384 273 118</p> 
-                        <p>Email: <a href="mailto:info@primeoak.co.uk">info@primeoak.co.uk</a></p>
+                                    <p>Should you need to call out of hours, please leave a message with our answering service.</p>
+                                </div>
+                                
+                                <div class="tel">
+                                    <p>Tel: <a href="tel:+44 1384 296 611">+44 1384 296 611</a></p>
+                                    <p>Fax: +44 1384 273 118</p> 
+                                    <p>Email: <a href="mailto:info@primeoak.co.uk">info@primeoak.co.uk</a></p>
+                                </div>
+                        </div>   
                     </div>
                 </div>     
             </div>
@@ -59,7 +63,7 @@
           
         <div id="opp_image" style="background: url('<?php echo $opp_image; ?> ') center/cover;" class="contact-col-2 cols">
             
-            <div class="x centred">
+            <div class="x centred contact__cross">
                 <div>
                     <span></span>
                     <span></span>
@@ -71,13 +75,13 @@
             </div>
             <div class="opps-container">
                 <h3>If you are interested in working for Prime Oak please email your CV or contact details to:</h3>
-                <h3><b><a href="mailto:recruitment@primeoak.co.uk">recruitment@primeoak.co.uk</a></b></h3>
+                <a href="mailto:recruitment@primeoak.co.uk"><h3>recruitment@primeoak.co.uk</h3></a>
                 <hr>
                 
                 <h3>We are currently hiring Site Carpenters and Designers across the country and have one position available at our head office for a CAD Technician and one position becoming available over the next few months for an Administrator. Please send in your CV and cover letter to apply for any of the above positions.</h3>
                 <hr>
 
-                <h3>for more information regarding the vacancies please email: <b><a href="mailto:recruitment@primeoak.co.uk​">recruitment@primeoak.co.uk​</a></b></h3>
+                <h3>for more information regarding the vacancies please email:</h3> <a href="mailto:recruitment@primeoak.co.uk​"><h3>recruitment@primeoak.co.uk​</h3></a>
             </div>  
             <div class="social-icons">
                 <ul class="icon-list">
