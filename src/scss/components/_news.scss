@@ -3,7 +3,8 @@
             display: -ms-grid;
             display: grid;
             grid-gap: 3px;
-            grid-template-column: 1fr;
+            grid-template-columns: 1fr;
+            -ms-grid-column: 2;
 
             .news {
                 padding: 0 2em;

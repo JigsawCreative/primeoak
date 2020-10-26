@@ -24,6 +24,12 @@
                 flex-direction: column;
     }
 
+.title {
+    @include for-desktop-up {
+        width: 65%;
+    }
+}
+
 .title, .subtitle {
     color: $white;
     text-align: center;
@@ -48,6 +54,7 @@
             right: 0;
             text-align: end;
             padding-right: 5rem;
+            font-weight: 600;
         }
     }
 
@@ -61,8 +68,10 @@
 
 /*payment method icons*/
 .payment-methods {
-    text-align: center;
-
+    
+    display: flex;
+    justify-content: center;
+    
     img {
         margin: 10px;
     }
@@ -71,13 +80,11 @@
 @include all-mobile-devices {
     .main__services {
         padding-top: $top-offset; /** Offset position fixed menu height **/
-        -ms-grid-rows: 300px -webkit-max-content -webkit-max-content 300px -webkit-max-content -webkit-max-content -webkit-max-content -webkit-max-content -webkit-max-content 300px;
         -ms-grid-rows: 300px max-content max-content 300px max-content max-content max-content max-content max-content 300px;
-        grid-template-rows: 300px -webkit-max-content -webkit-max-content 300px -webkit-max-content -webkit-max-content -webkit-max-content -webkit-max-content -webkit-max-content 300px;
         grid-template-rows: 300px max-content max-content 300px max-content max-content max-content max-content max-content 300px;
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-                                    grid-template-areas: 
+        grid-template-areas: 
         'fw-img-top'
         'text-col-1'
         'text-col-2'
@@ -106,9 +113,8 @@
   .main__services {
     -ms-grid-columns: 50% 50%;
     grid-template-columns: 50% 50%;
-    grid-auto-rows: 100vh -webkit-max-content minmax(300px, 550px) -webkit-max-content -webkit-max-content -webkit-max-content 60px;
-    grid-auto-rows: 100vh max-content minmax(300px, 550px) max-content max-content max-content 60px;
-                                grid-template-areas: 
+    grid-template-rows: 100vh max-content minmax(300px, 550px) repeat(3, max-content) 60px;
+    grid-template-areas: 
         'fw-img-top fw-img-top'
         'text-col-1 text-col-2'
         'img_text_desktop img_text_desktop'

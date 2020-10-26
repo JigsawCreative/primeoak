@@ -7,6 +7,7 @@
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
+    -ms-grid-column: 2;
 
     .form-header {
         padding: 2em;
@@ -18,13 +19,9 @@
             -webkit-box-direction: normal;
             flex-direction: column;
             position: relative;
+            -ms-grid-row: 1;
 
             .forms-title-box {
-                /* position: absolute;
-                left: 50%;
-                top: 50%;
-                -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%); */
 
                 h1 {
                     color: $white;
@@ -33,6 +30,10 @@
                 }
             }
         }
+    }
+
+    .brochure-form, .design-consultation {
+        -ms-grid-row: 2;
     }
 
     /** Thank you page **/

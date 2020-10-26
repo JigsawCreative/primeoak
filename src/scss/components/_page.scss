@@ -14,6 +14,7 @@
     grid-template-columns: 1fr;
     -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
+    -ms-grid-column: 2;
 }
 
 @include for-desktop-up {
@@ -141,9 +142,6 @@
 
 
 .slide-wrapper {
-    /*background-size: cover!important;*/
-    /*background-repeat: no-repeat!important;*/
-    /*background-position: center!important;*/
     height: 100vh;
     width: 100vw !important;
     display: -webkit-box !important;

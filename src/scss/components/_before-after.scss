@@ -8,6 +8,7 @@
         display: -ms-grid;
         display: grid;
         height: 100vh;
+        -ms-grid-column: 2;
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
 
