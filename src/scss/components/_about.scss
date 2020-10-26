@@ -8,6 +8,8 @@
 /*text areas styling*/
 #history, #quality, #recognition {
     .text-area-container {
+        display: flex;
+        flex-direction: column;
         padding: 4em;
         margin: 0em;
 
@@ -15,8 +17,19 @@
         padding: 2em;
         margin: 1em;
         }
+
+        h2 {
+            align-self: center;
+            width: 330px;
+            text-align: center;
+        }
     }
 }
+
+#recognition {
+    background: $off-white;
+}
+
 /*houzz award images styling*/
 .houzz-images {
     display: -webkit-box;
