@@ -1,13 +1,5 @@
 			<!-- footer -->
-			<footer class="footer" role="contentinfo">
-
-				<!-- copyright
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
-				/copyright -->
-			</footer>
+			<footer class="footer" role="contentinfo"></footer>
 			<!-- /footer -->
 
 		</div>
@@ -25,25 +17,17 @@
 		ga('send', 'pageview');
 		</script>
 		
-		<!-- Reviews.io widget -->
-		<link rel="stylesheet" type="text/css" href="https://widget.reviews.io/floating-widget/css/dist.css">
-		<script src="https://widget.reviews.io/rich-snippet-reviews-widgets/dist.js" type="text/javascript"></script>
-
-		<script>
-		    window.onload = function() {
-		        richSnippetReviewsWidgets({
-		            store: "primeoak-co-uk",
-		            primaryClr: "#f47e27",
-		            widgetName: "floating-widget",
-		            numReviews: 40,
-		            floatPosition: "left",
-		            contentMode: "company",
-		            hideDates: false
-		        });
-		    };
-		</script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.event.move/1.3.6/jquery.event.move.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.twentytwenty.min.js"></script>
+
+		<script src="https://widget.reviews.co.uk/badge-ribbon/dist.js"></script>
+		<div id="badge-ribbon"></div>
+		<script>
+			reviewsBadgeRibbon("badge-ribbon", {
+				store: "primeoak-co-uk",
+				size: "medium",
+			});
+</script>
 	</body>
 </html>

@@ -1,0 +1,15 @@
+#badge-ribbon {
+    background: $white;
+    position: fixed;
+    right: 20px;
+    bottom: 0px;
+    z-index: 9998;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+
+    @include all-mobile-devices {
+        display: none;
+        width: 100%;
+        right: 0px;
+    }
+}
