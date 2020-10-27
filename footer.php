@@ -26,7 +26,7 @@
 		<script>
 			reviewsBadgeRibbon("badge-ribbon", {
 				store: "primeoak-co-uk",
-				size: "medium",
+				size: "small",
 			});
 </script>
 	</body>
