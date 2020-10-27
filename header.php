@@ -74,17 +74,22 @@
 						
 					</nav>
 					<!-- /nav -->
-					
-					<!-- social links -->
-					<div class="social-menu">
-						    <ul class="icon-list">
-						        <li class="social"><a href="https://www.facebook.com/PrimeOak" class="fb"><img src="/wp-content/uploads/facebook.svg"></a></li>
-						        <li class="social"><a href="https://twitter.com/PrimeOakUK" class="twitter"><img src="/wp-content/uploads/twitter.svg"></a></li>
-						        <li class="social"><a href="https://www.pinterest.co.uk/primeoak/" class="pinterest"><img src="/wp-content/uploads/pinterest.svg"></a></li>
-						        <li class="social"><a href="https://www.houzz.co.uk/professionals/design-and-build/prime-oak-ltd-pfvwgb-pf~1133562070" class="houzz"><img src="/wp-content/uploads/houzz.svg"></a></li>
-						    </ul>
+					<div class="menu-bottom">
+
+						<!-- Reviews.io widget div -->
+						<div id="badge-230" style="max-width:150px;"></div>
+						
+						<!-- social links -->
+						<div class="social-menu">
+							<ul class="icon-list">
+								<li class="social"><a href="https://www.facebook.com/PrimeOak" class="fb"><img src="/wp-content/uploads/facebook.svg"></a></li>
+								<li class="social"><a href="https://twitter.com/PrimeOakUK" class="twitter"><img src="/wp-content/uploads/twitter.svg"></a></li>
+								<li class="social"><a href="https://www.pinterest.co.uk/primeoak/" class="pinterest"><img src="/wp-content/uploads/pinterest.svg"></a></li>
+								<li class="social"><a href="https://www.houzz.co.uk/professionals/design-and-build/prime-oak-ltd-pfvwgb-pf~1133562070" class="houzz"><img src="/wp-content/uploads/houzz.svg"></a></li>
+							</ul>
 						</div>
 						<!-- /social links -->
+					</div>
 				</div>	
 			</header>
 			<!-- /header -->

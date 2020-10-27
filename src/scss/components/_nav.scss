@@ -4,6 +4,7 @@
     z-index: 9999;
 
     @include for-desktop-up {
+        overflow-y: auto;
         z-index: 9999;
         height: 100vh;
         width: 320px;
@@ -11,7 +12,7 @@
         left: 0;
         top: 0;
         height: 100%;
-        min-height: 768px;
+        // min-height: 768px;
 
         .nav-container {
 
@@ -76,6 +77,7 @@
             position: fixed;
             z-index: 10000;
         }
+
     }
 }
 
@@ -113,7 +115,7 @@ nav {
             }
 
             li.download {
-                margin-bottom: 3em;
+                margin-bottom: 1em;
             }
 
             li.download::after {
@@ -182,6 +184,20 @@ nav {
     }
 
     hr {
+        display: none;
+    }
+}
+
+/** Menu bottom section **/
+.menu-bottom {
+    @include for-desktop-up {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @include all-mobile-devices {
         display: none;
     }
 }
@@ -332,9 +348,10 @@ nav {
 
     /** Desktop Positioning **/
     @include for-desktop-up {
-        position: absolute;
-        bottom: 2%;
+        padding: 2rem 0rem;
         width: 100%;
+        display: flex;
+        justify-content: center;
 
         li {
             padding-left: 5px;

@@ -22,12 +22,16 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.twentytwenty.min.js"></script>
 
 		<script src="https://widget.reviews.co.uk/badge-ribbon/dist.js"></script>
-		<div id="badge-ribbon"></div>
+		<!-- Reviews.io widget script -->
+		<script src="https://widget.reviews.co.uk/badge-modern/dist.js"></script>
+
 		<script>
-			reviewsBadgeRibbon("badge-ribbon", {
-				store: "primeoak-co-uk",
-				size: "small",
+			reviewsBadgeModern('badge-230', {
+			store: 'primeoak-co-uk',
+			primaryClr: '#000000',
+			starsClr: '#000000',
+			
 			});
-</script>
+		</script>
 	</body>
 </html>
