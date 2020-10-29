@@ -12,6 +12,13 @@
     ;
 
     grid-template-rows: max-content max-content max-content 60vh;
+    -ms-grid-rows: max-content max-content max-content 60vh;
+
+    #high-beeches-showsite {
+        img {
+            width: 100%;
+        }
+    }
 
     .showsite-video {
         background: grey;
@@ -69,7 +76,15 @@
         grid-template-areas: 
         'showsite-text viewing'
         ;
+
+        .showsite {
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+        }
+
         .viewing-times-container {
+            -ms-grid-row: 1;
+            -ms-grid-column: 2;
             display: -webkit-box;
             display: flex;
             -webkit-box-pack: end;
@@ -116,10 +131,10 @@
 }
 
 .__showsite { -ms-grid-row: 1; -ms-grid-column: 2; grid-area: main;}
-#swindon-showsite { -ms-grid-row: 1; -ms-grid-column: 1; grid-area: swindon_video;}
-#swindon-showsite-text {grid-area: swindon_showsite_text;}
-#high-beeches-showsite { grid-area: high_beeches_img; }
-#high-beeches-showsite-text { grid-area: high_beeches_text; }
-.showsite-text { -ms-grid-row: 2; -ms-grid-column: 1; grid-area: showsite_text;}
+#swindon-showsite { -ms-grid-row: 2; -ms-grid-column: 1; grid-area: swindon_video;}
+#swindon-showsite-text {-ms-grid-row: 3; -ms-grid-column: 1; grid-area: swindon_showsite_text;}
+#high-beeches-showsite { -ms-grid-row: 2; -ms-grid-column: 2; grid-area: high_beeches_img; }
+#high-beeches-showsite-text { -ms-grid-row: 3; -ms-grid-column: 2; grid-area: high_beeches_text; }
+.showsite-text { -ms-grid-row: 1; -ms-grid-column: 1; -ms-grid-column-span: 2; grid-area: showsite_text;}
 .viewing-times-container { -ms-grid-row: 2; -ms-grid-column: 1; grid-area: viewing;}
-.showsite-drone-video { grid-area: showsite_drone_video; }
+.showsite-drone-video { -ms-grid-row: 4; -ms-grid-column: 1; -ms-grid-column-span: 2; grid-area: showsite_drone_video; }
