@@ -1,58 +1,87 @@
 /** News posts layout **/
-        .main__news {
-            display: -ms-grid;
+#news {
+    overflow-x: hidden;
+
+    @supports(display: grid) {
+        overflow-x: unset;
+    }
+
+    .main__news {
+        /** IE11 layout **/
+        display: -ms-flex;
+        -ms-flex-direction: column;
+        -ms-grid-column: 2;
+
+        @supports(display: grid) {
             display: grid;
             grid-gap: 3px;
             grid-template-columns: 1fr;
-            -ms-grid-column: 2;
+        }
+        
 
-            .news {
-                padding: 0 2em;
+        .news {
+            padding: 0 2em;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;             
+
+            .article-container {
+                height: 80%;
                 display: -webkit-box;
                 display: flex;
-                -webkit-box-align: center;
-                        align-items: center;                
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                        flex-direction: column;
+                justify-content: space-around;
 
-                .article-container {
-                    height: 80%;
-                    display: -webkit-box;
-                    display: flex;
-                    -webkit-box-orient: vertical;
-                    -webkit-box-direction: normal;
-                            flex-direction: column;
-                    justify-content: space-around;
+                    h1 {
+                    color: $white;
+                    margin: 0px;
 
-                        h1 {
-                        color: $white;
-                        margin: 0px;
-
-                        @include for-desktop-up {
-                            max-width: 60%;
-                        }
+                    @include for-desktop-up {
+                        max-width: 60%;
                     }
+                }
 
-                    .news-links {
+                .news-links {
 
-                        .btn-ghost {
-                            margin-left: 0px;
-                        }
+                    .btn-ghost {
+                        margin-left: 0px;
                     }
                 }
             }
         }
-
-@include for-desktop-up {
-
-          .main__news {
-
-            grid-auto-rows: 397px;
-    
-          }
     }
 
-@include all-mobile-devices {
-    .main__news {
-        padding-top: $top-offset;
-        grid-auto-rows: 250px;
+    @include for-desktop-up {
+
+        .main__news {
+
+        grid-auto-rows: 397px;
+
+            .news {
+                height: 397px;
+
+                @supports(display: grid) {
+                    height: unset;
+                }   
+            }
+        }
+    }
+
+    @include all-mobile-devices {
+        .main__news {
+            padding-top: $top-offset;
+            grid-auto-rows: 250px;
+
+            .news {
+                height: 250px;
+
+                @supports(display: grid) {
+                    height: unset;
+                }   
+            }
+        }
     }
 }

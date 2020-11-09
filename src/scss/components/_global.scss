@@ -18,8 +18,8 @@ body {
     @include for-desktop-up {
         -ms-grid-rows: 1fr auto auto;
         grid-template-rows: 1fr auto auto;
-        -ms-grid-columns: 320px 10fr;
-        grid-template-columns: 320px 10fr;
+        -ms-grid-columns: 320px 1fr;
+        grid-template-columns: 320px 1fr;
         grid-template-areas:
             'main-menu main'
         ;
