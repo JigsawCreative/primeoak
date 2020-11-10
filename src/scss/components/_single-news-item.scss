@@ -1,13 +1,20 @@
 /** News posts layout **/
 .main__single-news {
-  -ms-grid-column: 2;
+  @include for-desktop-up {
+    /** IE11 grid position **/
+    -ms-grid-column: 2;
+  }
 
   .single-news {
     height: 100vh;
 
     /** Layout for project journey news items **/
     .project-journey {
-      grid-template-rows: max-content 1fr;
+      -ms-grid-rows: max-content 1fr;
+
+      @supports (display: grid) {
+        grid-template-rows: max-content 1fr;
+      }
     }
 
     .news-slider {
