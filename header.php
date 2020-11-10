@@ -76,8 +76,20 @@
 					<!-- /nav -->
 					<div class="menu-bottom">
 
+						<!-- Reviews.io widget script, badge div is in header -->
+						<script src="https://widget.reviews.co.uk/badge-modern/dist.js"></script>
+
 						<!-- Reviews.io widget div -->
 						<div id="badge-230" style="max-width:150px;"></div>
+
+						<script>
+							reviewsBadgeModern('badge-230', {
+							store: 'primeoak-co-uk',
+							primaryClr: '#000000',
+							starsClr: '#000000'
+							
+							});
+						</script>
 						
 						<!-- social links -->
 						<div class="social-menu">

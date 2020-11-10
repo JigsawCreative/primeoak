@@ -20,18 +20,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.event.move/1.3.6/jquery.event.move.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.twentytwenty.min.js"></script>
-
-		<script src="https://widget.reviews.co.uk/badge-ribbon/dist.js"></script>
-		<!-- Reviews.io widget script -->
-		<script src="https://widget.reviews.co.uk/badge-modern/dist.js"></script>
-
-		<script>
-			reviewsBadgeModern('badge-230', {
-			store: 'primeoak-co-uk',
-			primaryClr: '#000000',
-			starsClr: '#000000',
-			
-			});
-		</script>
+                    
 	</body>
 </html>
