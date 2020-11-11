@@ -1,6 +1,4 @@
-<header><?php get_header(); ?></header>
-
-
+<?php get_header(); ?>
 
 	<?php if(is_front_page()) : 
 		$video_logo = get_field( 'video_logo' );
@@ -35,7 +33,7 @@
 	            </ul>    
 	            
 			</div>
-			<img class="twenty-year-logo" src="<?php echo $label_image['url']; ?>" />
+			<img class="twenty-year-logo" src="<?php echo $label_image['url']; ?>"  alt="<?php echo $label_image['alt']; ?>"/>
 	</main>		
 		
 		<?php else: ?>
@@ -53,4 +51,4 @@
 
 <?php endif; ?>
 
-<footer><?php get_footer(); ?></footer>
+<?php get_footer(); ?>
