@@ -8,19 +8,9 @@ $dark-grey: #3d3d3d;
 $moss-green: #b0a773;
 
 /** Box shadow **/
-$shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-0 17px 50px 0 rgba(0, 0, 0, 0.19);
+$shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 $slider-shadow: inset 0 0 10px;
-$small-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24),
-0 6px 25px 0 rgba(0, 0, 0, 0.19);
-
-/** Typography **/
-@font-face {
-    font-family: Gill-Sans-Light;
-    //src: url(./wp-content/themes/prime-oak/fonts/GillSans-Light.ttf);
-    src: url(../../fonts/GillSans-Light.ttf);
-    font-weight: light;
-}
+$small-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24), 0 6px 25px 0 rgba(0, 0, 0, 0.19);
 
 /** Top offset (for position fixed menu) **/
 $top-offset: 69px;
@@ -31,43 +21,43 @@ $hover: 0.7;
 //global screen size mixins
 
 @mixin for-phone-only {
-    @media (max-width: 599px) {
-        @content;
-    }
+  @media (max-width: 599px) {
+    @content;
+  }
 }
 
 @mixin for-tablet-portrait-up {
-    @media (min-width: 600px) {
-        @content;
-    }
+  @media (min-width: 600px) {
+    @content;
+  }
 }
 
 @mixin for-tablet-landscape-up {
-    @media (min-width: 900px) {
-        @content;
-    }
+  @media (min-width: 900px) {
+    @content;
+  }
 }
 
 @mixin for-tablet-only {
-    @media(min-width: 600px) and (max-width: 1199px) {
-        @content;
-    }
+  @media (min-width: 600px) and (max-width: 1199px) {
+    @content;
+  }
 }
 
 @mixin all-mobile-devices {
-    @media(max-width: 1199px) {
-        @content;
-    }
+  @media (max-width: 1199px) {
+    @content;
+  }
 }
 
 @mixin for-desktop-up {
-    @media (min-width: 1200px) {
-        @content;
-    }
+  @media (min-width: 1200px) {
+    @content;
+  }
 }
 
 @mixin for-big-desktop-up {
-    @media (min-width: 1800px) {
-        @content;
-    }
+  @media (min-width: 1800px) {
+    @content;
+  }
 }
