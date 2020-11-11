@@ -14,5 +14,5 @@ import './components/smooth-scroll';
 import './components/news-slider';
 import './components/front-page';
 import './components/404';
-import './components/designer-login';
+//import './components/designer-login';
 import './components/product-slider';
