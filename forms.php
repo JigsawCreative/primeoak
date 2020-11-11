@@ -1,5 +1,5 @@
 <?php /* Template Name: Forms */ ?>
-<header><?php get_header(); ?></header>
+<?php get_header(); ?>
 	<?php $form_header = get_field( 'form_header' ); 
 
 	?>

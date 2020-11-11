@@ -1,6 +1,6 @@
 <?php /* Template Name: Services */ ?>
 
-<header><?php get_header(); ?></header>
+<?php get_header(); ?>
 
 	<main class="main__services main" role="main">
 
@@ -133,4 +133,4 @@
 				<?php include('cta.php'); ?>
 	</main>
 
-<footer><?php get_footer(); ?></footer>
+<?php get_footer(); ?>

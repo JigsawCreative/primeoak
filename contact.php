@@ -1,5 +1,5 @@
 <?php /* Template Name: Contact */ ?>
-<header><?php get_header(); ?></header>
+<?php get_header(); ?>
 
     <?php 
         
@@ -94,4 +94,4 @@
         </div>   
     </main>
 
-<footer><?php get_footer(); ?></footer>
+<?php get_footer(); ?>

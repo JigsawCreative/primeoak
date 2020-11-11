@@ -1,6 +1,6 @@
 <?php /* Template Name: Before-After */ ?>
 
-<header><?php get_header(); ?></header>
+<?php get_header(); ?>
 
 	<main class="main__ba main" role="main">
 			<!-- Load Before and Afters -->
@@ -61,9 +61,6 @@
 
 				<?php endif; ?>	
 			</section>
-	<!-- Image Comparison JS -->			
-	<!-- <script src="/wp-content/themes/prime-oak/src/js/jquery.twentytwenty.min.js"></script>
-	<script src="/wp-content/themes/prime-oak/src/js/jquery.event.move.min.js"></script> -->
 	</main>
 
-<footer><?php get_footer(); ?></footer>
+<?php get_footer(); ?>
