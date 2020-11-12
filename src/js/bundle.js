@@ -12,7 +12,6 @@ import './components/before-and-after';
 import './components/contact';
 import './components/smooth-scroll';
 import './components/news-slider';
-import './components/front-page';
+//import './components/front-page';
 import './components/404';
-//import './components/designer-login';
 import './components/product-slider';

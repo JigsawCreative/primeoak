@@ -74,6 +74,13 @@
 
 <?php endif; ?>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+	<!-- Call GSAP if on homepage -->
+	<?php if(is_front_page(  )) : ?>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+
+		<script src="<?php echo get_template_directory_uri(); ?>/dist/js/front-page-video.js"></script>
+
+	<?php endif; ?>
 
 <?php get_footer(); ?>
