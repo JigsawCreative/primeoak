@@ -69,9 +69,8 @@
 					
 					<!-- nav -->
 					<nav class="nav" role="navigation">
-					    <hr>
-						    <?php html5blank_nav(); ?>
-						<hr>
+
+						<?php html5blank_nav(); ?>
 						
 					</nav>
 					<!-- /nav -->
