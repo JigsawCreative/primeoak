@@ -10,28 +10,28 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1",
-    "@babel/register": "^7.7.0",
-    "autoprefixer": "^9.7.1",
-    "babel-loader": "^8.0.6",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/register": "^7.12.1",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.2.1",
     "browser-sync": "^2.26.13",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.2.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-if": "^3.0.0",
-    "gulp-imagemin": "^6.1.1",
+    "gulp-imagemin": "^6.2.0",
     "gulp-postcss": "^8.0.0",
     "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-zip": "^5.0.1",
+    "gulp-zip": "^5.0.2",
     "webpack-stream": "^5.2.1",
-    "yargs": "^14.2.0"
+    "yargs": "^14.2.3"
   },
   "dependencies": {
     "chromelogger": "^1.1.1",
     "compass-mixins": "^0.12.10",
-    "foundation-sites": "^6.6.1"
+    "foundation-sites": "^6.6.3"
   }
 }
