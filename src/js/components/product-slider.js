@@ -1,7 +1,7 @@
 var $ = jQuery;
 
 $(window).load(function() {
-    $('.product-slider').flexslider({
+    $('.product-slider, .single-product__slider').flexslider({
         animation: "fade",
         //slideshowSpeed: 7000,
         animationSpeed: 600,

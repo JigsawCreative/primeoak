@@ -1,104 +1,34 @@
 /** product slider **/
 .main__single-project {
-    background-color: #4D4D4D;
-    display: grid;
-    grid-template-columns: 1fr;
+  background-color: #4d4d4d;
+  display: grid;
+  grid-template-columns: 1fr;
 
-    .product-slider,
-    .product-slides {
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-    }
+  @include for-desktop-up {
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "cta_section"
+      "product-slider";
+  }
 
+  @include all-mobile-devices {
+    padding-top: $top-offset;
+    grid-template-rows: repeat(auto-fit, minmax(max-content, 800px));
+    grid-template-areas:
+      "product-slider"
+      "cta_section";
+  }
 
-    @include for-desktop-up {
-        grid-template-rows: auto 1fr;
-        grid-template-areas:
-            'cta_section'
-            'product-slider'
-        ;
-
-    }
-
-    @include all-mobile-devices {
-        padding-top: $top-offset;
-        grid-template-rows: repeat(auto-fit, minmax(max-content, 800px));
-        grid-template-areas:
-            'product-slider'
-            'cta_section'
-        ;
-    }
-
-
-    .product-slider {
-        position: relative;
-
-        .custom-navigation {
-            z-index: 9999;
-            position: absolute;
-            top: 0%;
-            width: 100%;
-            height: 100%;
-            display: -webkit-box;
-            display: flex;
-
-            a {
-                height: 100%;
-                width: 50%;
-                display: -webkit-box;
-                display: flex;
-                -webkit-box-align: center;
-                align-items: center;
-            }
-
-            .flex-prev {
-                -webkit-box-pack: start;
-                justify-content: flex-start;
-
-                &:hover {
-                    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
-                    background-image: linear-gradient(to left, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
-                }
-            }
-
-            .flex-next {
-                -webkit-box-pack: end;
-                justify-content: flex-end;
-
-                &:hover {
-                    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(0, 0, 0, .0001)), to(rgba(0, 0, 0, .5)));
-                    background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
-                }
-            }
-        }
-    }
-
-    ul.product-slides {
-        list-style: none;
-        padding-left: 0px;
-        margin: 0px;
-
-
-        li {
-            display: flex !important;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
-    }
-
-    .flex-direction-nav {
-        display: none;
-    }
+  .product-slider {
+    position: relative;
+  }
 }
-
 
 /** Regular Project Grid Areas **/
 .cta_section {
-    grid-area: cta_section;
+  grid-area: cta_section;
 }
 
 .product-slider {
-    grid-area: product-slider;
+  grid-area: product-slider;
 }
