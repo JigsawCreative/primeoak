@@ -51,7 +51,7 @@
 				<div class="single-product__image" style="background: url(<?php echo esc_url($single_product_header['url']); ?>) center/cover no-repeat;" alt="<?php echo esc_attr($single_product_header['alt']); ?>">
 				</div>
 
-				<div class="product-body-text boxed-content">
+				<div class="single-product__body-text boxed-content">
 
 					<h1 class="single-product__title"><?php the_title(); ?></h1>
 					
