@@ -4,6 +4,7 @@
 		$video_logo = get_field( 'video_logo' );
 		$home_slides = get_field( 'home_slides' );
 		$label_image = get_field( 'label_image' );
+		$add_label_image = get_field( 'add_label_image' );
 		?>
 
 		<div class="video-title">
@@ -56,7 +57,13 @@
 			</ul>    
 			
 		</div>
-			<img class="twenty-year-logo" src="<?php echo $label_image['url']; ?>"  alt="<?php echo $label_image['alt']; ?>"/>
+
+			<?php if($add_label_image) : ?>
+
+				<img class="twenty-year-logo" src="<?php echo $label_image['url']; ?>"  alt="<?php echo $label_image['alt']; ?>"/>
+
+			<?php endif; ?>
+
 	</main>		
 		
 		<?php else: ?>
