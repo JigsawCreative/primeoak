@@ -11,7 +11,9 @@
 	<?php if ( $wpb_all_query->have_posts() ) : ?>
 	 
 	 <div class="product-gallery">
+
 		<ul class="product-list">
+
 	    <!-- the loop -->
 	    <?php $counter = 1; ?>
 	  
@@ -24,28 +26,46 @@
 	    			if( $counter == $total_posts_count && $counter %2 !=0 ) :
 	    	?>
 
-	    		<li class="product-last-post">
-			<?php if ( has_post_thumbnail()) : 
-				the_post_thumbnail(); ?>
+	    	<li class="product-last-post">
+			
+				<?php if ( has_post_thumbnail()) : the_post_thumbnail(); ?>
 
-			<?php endif; ?>	
+				<?php endif; ?>	
 			
 			<?php else: ?>
 			
 			<li class="product-<?php echo $counter;?>">
-				<?php if ( has_post_thumbnail()) : 
-					the_post_thumbnail(); ?>
+
+				<?php if ( has_post_thumbnail()) : the_post_thumbnail(); ?>
 
 				<?php endif; ?>			
 		           
-		    <?php endif; ?>            
+		    <?php endif; ?>
+
 	            <div class="product-info-container">
+
 	                <h2 class="product-title"><?php the_title(); ?></h2>
-	                <a class="btn-ghost product-btn" href="<?php the_permalink(); ?>">TAKE A LOOK</a>
+
+					<?php 
+					
+						$remove_link = get_field( 'remove_link' );
+
+					if($remove_link) : ?>
+
+					<?php else: ?>
+
+						<a class="btn-ghost product-btn" href="<?php the_permalink(); ?>">TAKE A LOOK</a>
+
+					<?php endif;?>
+
 	            </div>
+
 	            <div class="product-overlay"></div>
+
 	        </li>
+
 			<?php $counter++; ?>
+
 	    <?php endwhile; ?>
 	    <!-- end of the loop -->
 			
@@ -56,5 +76,7 @@
 	    <?php wp_reset_postdata(); ?>
 	 
 	<?php else : ?>
+
 	    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+
 	<?php endif; ?>

@@ -12,6 +12,7 @@ $about_us_image = get_field( 'about_us_image' );
             
         <div class="about-us__image">
 
+            <div class="about-us__image-overlay"></div>
             <img src="<?=$about_us_image['url']; ?>" alt="<?=$about_us_image['alt']; ?>">
         
         </div>

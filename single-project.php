@@ -4,8 +4,9 @@
 		$page_url = $_SERVER['REQUEST_URI'];
 			//get url for slider back button
 			$go_back = htmlspecialchars($_SERVER['HTTP_REFERER']);
+			$fi_type = get_field( 'fi_type' );
 	?>	
-<?php if(strpos($page_url, 'further')) : ?>
+<?php if($fi_type) : ?>
 
 	<main class="main__single-project main">
 
@@ -15,8 +16,6 @@
 				<div class="image_grid_area">
 					<div class="back-btn">
 						<a href="<?php echo $go_back; ?>" class="back-btn">
-							<!-- <span></span>
-							<span></span> -->
 							<p><b>BACK</b></p>
 						</a>
 					</div>
